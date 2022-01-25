@@ -10,12 +10,8 @@ export const fetchPinballAsync = async () => {
 };
 
 export const fetchPinballThen = () => {
-  const resp = fetch('https://ponball.herokuapp.com/api/v1/machines')
-    .then((data) => data.json())
-    .then((pinballData) => console.log(pinballData));
+  const resp = fetch('https://ponball.herokuapp.com/api/v1/machines').then(
+    (data) => data.json()
+  );
+  return resp;
 };
-
-// async function funcName(url) {
-//   const response = await fetch(url);
-//   var data = await response.json();
-// }
