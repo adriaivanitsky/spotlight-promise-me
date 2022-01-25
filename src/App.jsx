@@ -1,12 +1,17 @@
 import { useEffect } from 'react';
-import { fetchPinballAsync, fetchPinballThen } from './services/promise-me';
+import {
+  fetchPinballAsync,
+  fetchPinballThen,
+  fetchMovieAsync,
+  fetchMovieThen,
+} from './services/promise-me';
 
 export default function App() {
-  useEffect(() => {
-    // fetchPinballAsync();
-    console.log(fetchPinballAsync());
-    // fetchPinballThen();
-    console.log(fetchPinballThen());
+  useEffect(async () => {
+    await fetchPinballAsync();
+    await fetchPinballThen();
+    await fetchMovieAsync();
+    await fetchMovieThen();
   });
 
   return <h1>Hello World</h1>;
